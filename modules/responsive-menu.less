@@ -5,13 +5,13 @@
 // General
 //@navbarAccentColor:         #9FB129;
 @navbarItemBgColor:         inherit; //#444;
-@navbarItemColor:           inherit;
-@navbarItemHoverColor:      inherit; //lighten(@navbarItemColor, 20%);
+@navbarItemColor:           #fff;
+@navbarItemHoverColor:      darken(@navbarItemColor, 40%);
 @navbarItemHoverBgColor:    inherit; //#666;
 
 // Menu item current/selected
 @navbarItemSelectedColor:       inherit;
-@navbarItemSelectedBgColor:     inherit; 
+@navbarItemSelectedBgColor:     inherit;
 //@navbarItemSelectedBorderColor: darken(lime, 10%);
 
 // Mobile button
@@ -20,7 +20,7 @@
 //@navbarMobileBorderColor:               #ddd;
 
 // The menu button
-@navbarMenuButtonColor:         inherit;
+@navbarMenuButtonColor:         #fff;
 @navbarMenuButtonBgColor:       transparent;
 //@navbarMenuButtonBorderColor:   #999;
 
@@ -30,7 +30,7 @@
 //@navbarMenuButtonHoverBorderColor:   #333;
 
 // The menu button clicked
-@navbarMenuButtonClickedColor:          #9FB129;
+@navbarMenuButtonClickedColor:          #39555C;
 @navbarMenuButtonClickedBgColor:        @navbarMenuButtonHoverBgColor;
 //@navbarMenuButtonClickedBorderColor:    lime;
 
@@ -48,7 +48,7 @@
 @maxBgColor:                #131313;
 @maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
 @maxButtonFontSize:         inherit;
-@maxButtonColor:            inherit;
+@maxButtonColor:            #fff;
 @maxButtonClickedColor:     @navbarMenuButtonClickedColor;
 @maxButtonSubmenuBgColor:    #444;
 @maxButtonSubmenuHoverBgColor: #ccc;
@@ -95,6 +95,8 @@ a.rm-button {
     background-color: @navbarMenuButtonBgColor;
     outline: none;
 
+    margin-top: -5.5px;
+
     //&:hover, // Avoid hover, click, double-tap behaviour
     &:active {
         color: @navbarMenuButtonHoverColor;
@@ -104,6 +106,7 @@ a.rm-button {
     .rm-button-face-1 {
         position: absolute;
         transition: color 0.10s ease;
+        //color: #fff;
     }
 
     .rm-button-face-2 {
@@ -164,10 +167,10 @@ a.rm-button {
 
      // The base for the submenu
      ul {
-        position: absolute; 
+        position: absolute;
         z-index: @submenuZIndex;
-        left: -9999px; 
-        //padding-left: 8px; 
+        left: -9999px;
+        //padding-left: 8px;
 
         // Display the submenu, class to use from javascript
         &.rm-show-submenu {
@@ -180,7 +183,7 @@ a.rm-button {
 
          // Submenu
          ul {
-             left: -9999px; 
+             left: -9999px;
          }
      }
 }
@@ -193,7 +196,7 @@ a.rm-button {
 .rm-desktop {
 
     ul {
-        background-color: @submenuBgColor; 
+        background-color: @submenuBgColor;
     }
 
     li {
@@ -204,8 +207,8 @@ a.rm-button {
         &.rm-selected,
         &.selected-parent, // for selected descendants
         &.selected {
-            //color: @navbarItemSelectedColor; 
-            //background-color: @navbarItemSelectedBgColor; 
+            //color: @navbarItemSelectedColor;
+            //background-color: @navbarItemSelectedBgColor;
         }
 
 
@@ -245,7 +248,7 @@ a.rm-button {
                 left: auto;
                 left: 30%;
             }
-        } 
+        }
 
 
         // Dropdown submenu, remove hide show button
@@ -307,7 +310,7 @@ a.rm-button {
         // Hover over a menu item
         &:hover {
             //border-color: @navbarMobileItemHoverBorderColor;
-        } 
+        }
     }
 }
 
