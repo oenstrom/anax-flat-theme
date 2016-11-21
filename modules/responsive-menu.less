@@ -7,11 +7,11 @@
 @navbarItemBgColor:         inherit; //#444;
 @navbarItemColor:           #fff;
 @navbarItemHoverColor:      darken(@navbarItemColor, 40%);
-@navbarItemHoverBgColor:    inherit; //#666;
+@navbarItemHoverBgColor:    rgba(0,0,0,0.1); // inherit;
 
 // Menu item current/selected
-@navbarItemSelectedColor:       inherit;
-@navbarItemSelectedBgColor:     inherit;
+@navbarItemSelectedColor:       #fff; // inherit;
+@navbarItemSelectedBgColor:     rgba(0,0,0,0.1); // inherit;
 //@navbarItemSelectedBorderColor: darken(lime, 10%);
 
 // Mobile button
@@ -106,6 +106,7 @@ a.rm-button {
     .rm-button-face-1 {
         position: absolute;
         transition: color 0.10s ease;
+        font-style: normal;
         //color: #fff;
     }
 
@@ -113,6 +114,7 @@ a.rm-button {
         position: relative;
         color: transparent;
         transition: color 0.10s ease;
+        font-style: normal;
     }
 
     &.rm-clicked {
@@ -158,7 +160,7 @@ a.rm-button {
         display: block;
         text-decoration: none;
         white-space: nowrap;
-        padding: 1em;
+        padding: 1.03em;
         outline: none;
 
         &:hover {
@@ -207,8 +209,7 @@ a.rm-button {
         &.rm-selected,
         &.selected-parent, // for selected descendants
         &.selected {
-            //color: @navbarItemSelectedColor;
-            //background-color: @navbarItemSelectedBgColor;
+            background-color: @navbarItemSelectedBgColor;
         }
 
 
@@ -224,12 +225,6 @@ a.rm-button {
         // The link of the menu item
         a {
             color: @navbarItemColor;
-            background-color: @navbarItemBgColor;
-
-            &:hover {
-                color: @navbarItemHoverColor;
-                background-color: @navbarItemHoverBgColor;
-            }
         }
 
 
@@ -237,7 +232,7 @@ a.rm-button {
         // Hover over a menu item and display submenu
         &:hover {
             //color: @navbarItemHoverColor;
-            //background-color: @navbarItemHoverBgColor;
+            background-color: @navbarItemHoverBgColor;
 
             // To display submenu(s)
             > ul {
@@ -274,6 +269,14 @@ a.rm-button {
     }
 
     li {
+        // Selected/current menu item
+        &.rm-selected-parent,  // For submenu
+        &.rm-selected,
+        &.selected-parent, // for selected descendants
+        &.selected {
+            background: #39555C;
+        }
+
         display: block;
         box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
 

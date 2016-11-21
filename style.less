@@ -3,30 +3,14 @@
 */
 @import url(modules.less);
 
-
-body {
-    background: @darkbackground;
-    line-height: 1.3;
-}
-
-
 @darkbackground: #222;
 @maxButtonFontSize: 2em;
 @standardLinkColor: #116075;
 @standardLinkColorHover: darken(@standardLinkColor, 20%);
 
-
-.btcf {
-    display: table;
-    clear: both;
-    content: "";
+body {
+    background: @darkbackground;
 }
-
-
-.outer-wrap-flash {
-    padding-top: 92px;
-}
-
 
 .inner-wrap-main,
 .inner-wrap-breadcrumb {
@@ -40,84 +24,25 @@ body {
 }
 
 
-.hljs {
-    background: #ddd;
-    padding: 1em;
+.desgin-img {
+    height: @magicNumber * 9;
+    width: auto;
+}
+.olof-fb-img {
+    height: @magicNumber * 12;
+    width: auto;
 }
 
 
-.byline {
-    width: 100%;
-    max-width: 550px;
-
-    &:after {
-        .btcf;
-    }
-
-    img {
-        border-radius: 50%;
-        display: block;
-        width: 80px;
-        height: 80px;
-        margin-right: 1em;
-        float: left;
-    }
-}
-
-/** --------------------------------------------------------------
- *  Logo images
- */
-// .logo-1 {
-//     position: absolute;
-//     top: 70px;
-//     left: -140px;
-// }
-
-// .site-logo-text-icon {
-//     img {
-//         vertical-align: bottom;
-//     }
-// }
-
-
-
-/** --------------------------------------------------------------
- *  Responsive design
- */
 img {
     max-width: 100%;
+    vertical-align: middle;
+    object-fit: contain;
 }
 
-// @media screen and (max-width: 900px) {
-//
+// @media screen and (max-width: 325px) {
+//     .desgin-img {
+//         height: auto;
+//         width: 100%;
+//     }
 // }
-
-
-@media screen and (max-width: 750px) {
-    .sidebar {
-        //width: 100%;
-        display: none;
-    }
-}
-
-
-@media screen and (max-width: 700px) {
-    .navbar2 {
-        display: none;
-    }
-    .profile {
-        display: block;
-    }
-
-    .footer-column {
-        width: 100%;
-        margin-right: 0;
-    }
-}
-
-
-@media screen and (max-width: 300px) {
-    .site-logo-text {
-        font-size: 1.5em;
-    }
- }

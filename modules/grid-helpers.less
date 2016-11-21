@@ -1,0 +1,20 @@
+/**
+ * Show grid.
+ */
+.showGrid(@maxWidth: 1260px) {
+    background: url(../img/grid/grid1260x12x85x20.png);
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: 100% auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: @maxWidth) {
+        background-size: @maxWidth auto;
+    }
+}
+
+.showTypography() {
+    background: url(../img/grid/horisontal-grid-24.png);
+}
