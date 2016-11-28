@@ -162,10 +162,10 @@
 /**
  * Display source code.
  */
-@borderColorCodeInline: #ccc;
-@bgColorCodeInline:     #eee;
 @bgColorCodeBlock:      #eee;
 @colorCodeBlockBorder:  #ccc;
+@borderColorCodeInline: @colorCodeBlockBorder;
+@bgColorCodeInline:     @bgColorCodeBlock;
 @borderSizeCodeblock:   1px;
 
 .typographyCodeElements() {
@@ -219,7 +219,7 @@
         // padding-bottom: @magicNumber / 2;
         // padding-left: 0.5em;
 
-        border: 1px solid #ccc;
+        border: 1px solid @colorCodeBlockBorder;
         margin-top: 0;
         margin-bottom: 0;
         padding: (@magicNumber / 2 - @borderSizeCodeblock) 1em;
@@ -309,91 +309,22 @@
 
 .typographyTableElements() {
     table {
-        margin-top: 0;
+        margin-top: -1px;
         margin-bottom: @magicNumber;
         border-spacing: 0;
         border-collapse: collapse;
     }
 
-    tr {
-        border-bottom: 1px solid #ccc;
-
-        &:last-of-type {
-            border-color: transparent;
-        }
-
-        &:only-of-type {
-            border-color: #ccc;
-        }
-    }
-
     th,
     td {
         padding: (@magicNumber / 2) @magicNumber (@magicNumber / 2 - 1px);
-        border-right: 1px solid #ccc;
-
-        &:last-of-type {
-            border-right: none;
-        }
+        border: 1px solid @borderColor;
 
         @media (max-width: 450px) {
             padding-left: 5px;
             padding-right: 5px;
         }
     }
-
-
-    // // A more styled table layout
-    // article table,
-    // .table,
-    // .table2 {
-    //     border-collapse: collapse;
-    //
-    //     caption {
-    //         .fontSize(@fontSizeSmall);
-    //         text-align: left;
-    //         font-style: italic;
-    //     }
-    //
-    //     thead {
-    //         box-shadow:  0 1px 0 @colorTableHeaderBorder;
-    //     }
-    //
-    //     th {
-    //         vertical-align: bottom;
-    //         font-weight: bold;
-    //         text-align: left;
-    //     }
-    //
-    //     th,
-    //     td {
-    //         padding: @magicNumber / 4;
-    //     }
-    //
-    //     tr {
-    //         box-shadow:  0 1px 0 @colorTableRowBorder;
-    //
-    //         &:hover {
-    //             color: @colorTableRowHover;
-    //             background-color: @bgColorTableRowHover;
-    //             box-shadow:  0 1px 0 @colorTableRowBorderHover;
-    //         }
-    //     }
-    //
-    //     tfoot {
-    //
-    //     }
-    // }
-    //
-    // // Stripe each even row in table
-    // table.striped {
-    //     tbody {
-    //         tr:nth-child(even) td,
-    //         tr.even td {
-    //             background-color: @bgColorTableStripe;
-    //         }
-    //     }
-    // }
 }
 
 
@@ -413,14 +344,5 @@
 
         margin-top: 1.5 * @magicNumber - 1px;
         margin-bottom: 1.5 * @magicNumber;
-
-        // &:after {
-        //     content: "§";
-        //     position: relative;
-        //     top: -0.7em;
-        //     left: 50%;
-        //     padding: 0 0.25em;
-        //     background-color: @bgColorHr;
-        // }
     }
 }

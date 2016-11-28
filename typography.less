@@ -1,0 +1,74 @@
+@import url(base.less);
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i|PT+Mono|Suez+One');
+
+/*
+ * LESS Variables
+ */
+// Typography
+@fontFamilyHeadings:  'Suez One', Georgia, serif;
+@fontFamilyBody:      'Josefin Sans', Verdana, sans-serif;
+@fontFamilyCode:      'PT Mono', monospace;
+
+// General
+@bodyBackgroundColor: #a66f00;
+@wrapBackgroundColor: #fff;
+@mainBackgroundColor: #fff;
+@baseTextColor: #000;
+@standardLinkColor: #00cc00;
+@standardLinkColorHover: #48036f;
+@standardLinkColorVisited: #00cc00;
+@sidebarSelectedBackground: #48036f;
+@sidebarSelectedTextColor: #fff;
+@borderColor: #ffd073;
+@bgColorCodeBlock: #eee;
+@colorCodeBlockBorder: #ffd073;
+// Header
+@headerBackgroundColor: #008500;
+@headerBackgroundColorAlpha: @headerBackgroundColor;
+@logoColor: #fff;
+// Footer
+@footerBackgroundColor: #a66f00;
+@footerTextColor: #fff;
+@footerLinkColor: #5f2580;
+@footerLinkColorHover: #48036f;
+// Responsive menu
+@navbarItemColor: #fff;
+@navbarItemHoverColor: #fff;
+@navbarItemHoverBgColor: #48036f;
+
+@navbarItemSelectedColor: #fff; // inherit;
+@navbarItemSelectedBgColor: #48036f;
+
+// Mobile menu
+@mobileColor:       #fff;
+@mobileSelectedColor:       #fff;
+@mobileSelectedBgColor:     #48036f;
+@navbarMenuButtonClickedColor: #fff;
+
+// Max menu
+@maxBgColor:                #008500;
+@maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
+@maxButtonColor:            #fff;
+@maxButtonClickedColor:     @navbarMenuButtonClickedColor;
+@maxButtonFontSize: 2em;
+
+.wrap-all {
+    code {
+        font-family: @fontFamilyCode;
+    }
+}
+
+.inner-wrap-flash {
+    padding: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
+}
+
+.flash-wrap {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}

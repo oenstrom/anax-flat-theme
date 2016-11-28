@@ -1,0 +1,80 @@
+@import url(base.less);
+
+
+/*
+ * LESS Variables
+ */
+ // #39555C
+ // #116075
+ // #14728b
+ // #0b3b48
+ // #222
+// General
+@bodyBackgroundColor: #222;
+@wrapBackgroundColor: #fff;
+@mainBackgroundColor: #fff;
+@baseTextColor: #000;
+@standardLinkColor: #116075;
+@standardLinkColorHover: #0b3b48;
+@standardLinkColorVisited: #14728b;
+@sidebarSelectedBackground: #eee;
+@borderColor: #ddd;
+@bgColorCodeBlock: #fbfbfb;
+@colorCodeBlockBorder: @borderColor;
+// Header
+@headerBackgroundColor: #39555C;
+@headerBackgroundColorAlpha: rgba(8,42,51,0.8);
+@logoColor: #fff;
+// Footer
+@footerBackgroundColor: #222;
+@footerTextColor: #fff;
+@footerLinkColor: #14728b;
+@footerLinkColorHover: @standardLinkColor;
+// Responsive menu
+@navbarItemColor: #fff;
+@navbarItemHoverColor: @navbarItemColor;
+@navbarItemHoverBgColor: rgba(0,0,0,0.1);
+
+@navbarItemSelectedColor: #fff; // inherit;
+@navbarItemSelectedBgColor: rgba(0,0,0,0.1);
+
+// Mobile menu
+@mobileColor:       #fff;
+@mobileSelectedColor:       #fff;
+@mobileSelectedBgColor:     #39555C;
+@navbarMenuButtonClickedColor: #39555C;
+
+// Max menu
+@maxBgColor:                #222;
+@maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
+@maxButtonColor:            #fff;
+@maxButtonClickedColor:     @navbarMenuButtonClickedColor;
+@maxButtonFontSize: 2em;
+
+
+
+.outer-wrap-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.outer-wrap-flash {
+    padding-top: 57px;
+}
+
+.inner-wrap-flash {
+    padding: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
+}
+
+.flash-wrap {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}

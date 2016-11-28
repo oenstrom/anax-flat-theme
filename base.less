@@ -1,0 +1,136 @@
+@import url(modules.less);
+
+/*
+ * LESS Variables
+ */
+// General
+@bodyBackgroundColor: #fff;
+@wrapBackgroundColor: #fff;
+@mainBackgroundColor: #fff;
+@baseTextColor: #000;
+@standardLinkColor: #33b;
+@standardLinkColorHover: darken(@standardLinkColor, 20%);
+@standardLinkColorVisited: #838;
+@sidebarSelectedBackground: none;
+@sidebarSelectedTextColor: @standardLinkColor;
+@borderColor: transparent;
+// Header
+@headerBackgroundColor: transparent;
+@headerBackgroundColorAlpha: transparent;
+@logoColor: #000;
+// Footer
+@footerBackgroundColor: #fff;
+@footerTextColor: #000;
+@footerLinkColor: @standardLinkColor;
+@footerLinkColorHover: @standardLinkColorHover;
+// Responsive menu
+@navbarItemColor: @standardLinkColor;
+@navbarItemHoverColor: @standardLinkColorHover;
+@navbarItemHoverBgColor: none;
+
+@navbarItemSelectedColor: #000;
+@navbarItemSelectedBgColor: transparent;
+
+// Mobile menu
+@mobileColor:       @standardLinkColor;
+@mobileSelectedColor:       #000;
+@mobileSelectedBgColor:     @navbarItemSelectedBgColor;
+@navbarMenuButtonClickedColor: #000;
+
+// Max menu
+@maxBgColor:                #fff;
+@maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
+@maxButtonColor:            #000;
+@maxButtonClickedColor:     @navbarMenuButtonClickedColor;
+@maxButtonFontSize: 2em;
+
+
+body {
+    background: @bodyBackgroundColor;
+    color: @baseTextColor;
+}
+
+.inner-wrap-flash,
+.inner-wrap-main,
+.inner-wrap-breadcrumb,
+.inner-wrap-after-main {
+    background: @mainBackgroundColor;
+    a {
+        text-decoration: underline;
+        color: @standardLinkColor;
+        &:visited {
+            color: @standardLinkColorVisited;
+        }
+        &:hover {
+            color: @standardLinkColorHover;
+        }
+    }
+}
+
+
+.wrap-all {
+    background-color: @wrapBackgroundColor;
+
+    hr {
+        background: @borderColor;
+    }
+}
+
+
+.outer-wrap-header {
+    background: @headerBackgroundColor;
+    background: @headerBackgroundColorAlpha;
+}
+
+.site-logo-text {
+    a {
+        text-decoration: none;
+        color: @logoColor;
+    }
+}
+
+.flash-wrap {
+    text-align: center;
+}
+
+.sidebar-left,
+.sidebar-right,
+.after-main,
+.breadcrumb-list {
+    border-color: @borderColor;
+}
+
+fieldset {
+    border-color: @borderColor;
+}
+
+.wrap-all .toc {
+    padding-left: 0;
+    list-style: none;
+    li {
+        padding-left: @magicNumber / 4
+    }
+    .selected {
+        margin-right: @magicNumber ;
+        background: @sidebarSelectedBackground;
+
+        a {
+            color: @sidebarSelectedTextColor;
+        }
+    }
+}
+
+.outer-wrap-footer {
+    background: @footerBackgroundColor;
+}
+.footer {
+    color: @footerTextColor;
+
+    a {
+        color: @footerLinkColor;
+
+        &:hover {
+            color: @footerLinkColorHover;
+        }
+    }
+}

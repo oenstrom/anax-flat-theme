@@ -1,0 +1,78 @@
+@import url(base.less);
+
+
+/*
+ * LESS Variables
+ */
+// General
+@bodyBackgroundColor: #eee;
+@wrapBackgroundColor: #eee;
+@mainBackgroundColor: #fff;
+@baseTextColor: #000;
+@standardLinkColor: #777;
+@standardLinkColorHover: #bbb;
+@standardLinkColorVisited: #777;
+@sidebarSelectedBackground: #ddd;
+@sidebarSelectedTextColor: #000;
+@borderColor: #ddd;
+@bgColorCodeBlock: @borderColor;
+@colorCodeBlockBorder: #eee;
+// Header
+@headerBackgroundColor: #fff;
+@headerBackgroundColorAlpha: @headerBackgroundColor;
+@logoColor: #000;
+// Footer
+@footerBackgroundColor: #bbb;
+@footerTextColor: #000;
+@footerLinkColor: #fff;
+@footerLinkColorHover: #eee;
+// Responsive menu
+@navbarItemColor: #000;
+@navbarItemHoverColor: #000;
+@navbarItemHoverBgColor: #ddd;
+
+@navbarItemSelectedColor: #000; // inherit;
+@navbarItemSelectedBgColor: #ddd;
+
+// Mobile menu
+@mobileColor:       #000;
+@mobileSelectedColor:       #000;
+@mobileSelectedBgColor:     #ddd;
+@navbarMenuButtonClickedColor: #000;
+
+// Max menu
+@maxBgColor:                #fff;
+@maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
+@maxButtonColor:            #000;
+@maxButtonClickedColor:     @navbarMenuButtonClickedColor;
+@maxButtonFontSize: 2em;
+
+.outer-wrap-header {
+    background: none;
+
+    .inner-wrap-header {
+        background: @headerBackgroundColor;
+
+        .site-header {
+            .site-logo-text {
+                padding: @magicNumber / 2;
+                font-weight: bold;
+            }
+            .navbar2 {
+                padding: @magicNumber / 2;
+            }
+            .rm-max.rm-navbar {
+                top: 28px;
+            }
+        }
+    }
+}
+
+.outer-wrap-footer {
+    background: none;
+    margin-bottom: @magicNumber;
+
+    .inner-wrap-footer {
+        background: @footerBackgroundColor;
+    }
+}

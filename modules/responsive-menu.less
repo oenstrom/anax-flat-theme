@@ -20,7 +20,7 @@
 //@navbarMobileBorderColor:               #ddd;
 
 // The menu button
-@navbarMenuButtonColor:         #fff;
+@navbarMenuButtonColor:         #000;
 @navbarMenuButtonBgColor:       transparent;
 //@navbarMenuButtonBorderColor:   #999;
 
@@ -41,8 +41,10 @@
 @submenuItemBorderColor:    #eee;
 
 // Mobile menu
-@mobileBgColor:     #444;
-@mobileColor:       #fff;
+@mobileBgColor:             #444;
+@mobileColor:               #fff;
+@mobileSelectedColor:       #fff;
+@mobileSelectedBgColor:     #39555C;
 
 // Max menu
 @maxBgColor:                #131313;
@@ -107,7 +109,6 @@ a.rm-button {
         position: absolute;
         transition: color 0.10s ease;
         font-style: normal;
-        //color: #fff;
     }
 
     .rm-button-face-2 {
@@ -210,6 +211,10 @@ a.rm-button {
         &.selected-parent, // for selected descendants
         &.selected {
             background-color: @navbarItemSelectedBgColor;
+
+            a {
+                color: @navbarItemSelectedColor;
+            }
         }
 
 
@@ -225,13 +230,16 @@ a.rm-button {
         // The link of the menu item
         a {
             color: @navbarItemColor;
+            &:hover {
+                color: @navbarItemHoverColor;
+            }
         }
 
 
 
         // Hover over a menu item and display submenu
         &:hover {
-            //color: @navbarItemHoverColor;
+            color: @navbarItemHoverColor;
             background-color: @navbarItemHoverBgColor;
 
             // To display submenu(s)
@@ -274,7 +282,8 @@ a.rm-button {
         &.rm-selected,
         &.selected-parent, // for selected descendants
         &.selected {
-            background: #39555C;
+            background: @mobileSelectedBgColor;
+            color: @mobileSelectedColor;
         }
 
         display: block;

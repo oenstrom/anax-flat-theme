@@ -1,0 +1,78 @@
+@import url(base.less);
+
+
+/*
+ * LESS Variables
+ */
+// General
+@bodyBackgroundColor: #eee;
+@wrapBackgroundColor: #eee;
+@mainBackgroundColor: #fff;
+@baseTextColor: #000;
+@standardLinkColor: #ffa873;
+@standardLinkColorHover: #ff8940;
+@standardLinkColorVisited: #ffa873;
+@sidebarSelectedBackground: #ff8940;
+@sidebarSelectedTextColor: #fff;
+@borderColor: #ffa873;
+@bgColorCodeBlock: #fff;
+@colorCodeBlockBorder: @borderColor;
+// Header
+@headerBackgroundColor: #fff;
+@headerBackgroundColorAlpha: @headerBackgroundColor;
+@logoColor: #000;
+// Footer
+@footerBackgroundColor: #bf6730;
+@footerTextColor: #fff;
+@footerLinkColor: #fff;
+@footerLinkColorHover: #eee;
+// Responsive menu
+@navbarItemColor: #ff8940;
+@navbarItemHoverColor: #fff;
+@navbarItemHoverBgColor: #ff8940;
+
+@navbarItemSelectedColor: #fff;
+@navbarItemSelectedBgColor: #ff8940;
+
+// Mobile menu
+@mobileColor:       #ff8940;
+@mobileSelectedColor:       #fff;
+@mobileSelectedBgColor:     #ff8940;
+@navbarMenuButtonClickedColor: #000;
+
+// Max menu
+@maxBgColor:                #fff;
+@maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
+@maxButtonColor:            #000;
+@maxButtonClickedColor:     @navbarMenuButtonClickedColor;
+@maxButtonFontSize: 2em;
+
+.outer-wrap-header {
+    background: none;
+
+    .inner-wrap-header {
+        background: @headerBackgroundColor;
+
+        .site-header {
+            .site-logo-text {
+                padding: @magicNumber / 2;
+                font-weight: bold;
+            }
+            .navbar2 {
+                padding: @magicNumber / 2;
+            }
+            .rm-max.rm-navbar {
+                top: 28px;
+            }
+        }
+    }
+}
+
+.outer-wrap-footer {
+    background: none;
+    margin-bottom: @magicNumber;
+
+    .inner-wrap-footer {
+        background: @footerBackgroundColor;
+    }
+}
