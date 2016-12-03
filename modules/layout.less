@@ -150,6 +150,17 @@
     }
 }
 
+.article.blog {
+    border-bottom: 1px solid @borderColor;
+    padding-bottom: @magicNumber - 1;
+    margin-bottom: @magicNumber;
+}
+
+.blog-list-item {
+    padding-top: @magicNumber;
+    margin-bottom: @magicNumber;
+}
+
 
 
 // after-main-delen
@@ -180,6 +191,13 @@
 
 
 // Footer-delen
+.footer-column-wrapper {
+    display: flex;
+
+    .footer-column {
+        .column(@columns/3);
+    }
+}
 .site-footer {
     text-align: center;
     padding: @magicNumber;
@@ -199,25 +217,8 @@
 }
 
 
-.desgin-img {
-    height: @magicNumber * 9;
-    width: auto;
-}
-.olof-fb-img {
-    height: @magicNumber * 12;
-    width: auto;
-}
-
-
-img {
-    max-width: 100%;
-    vertical-align: middle;
-    object-fit: contain;
-}
-
-
 // Media queries
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1090px) {
     .navbar2 {
         display: none;
     }
