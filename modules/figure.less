@@ -102,15 +102,17 @@
 }
 
 // Test
-.design-img, .olof-fb-img {
+.design-img img, .olof-fb-img img {
     width: auto;
     max-width: 100%;
     vertical-align: middle;
     object-fit: contain;
+    box-shadow: 1px 1px 14px 0 #000;
 }
-.design-img {
+.design-img img {
+    margin-top: @magicNumber;
     height: @magicNumber * 9;
 }
-.olof-fb-img {
+.olof-fb-img img {
     height: @magicNumber * 12;
 }
