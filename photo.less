@@ -1,0 +1,97 @@
+@import url(base.less);
+
+
+/*
+ * LESS Variables
+ */
+ // #9fee00;
+ // #86b32d;
+ // #679b00;
+ // #b9f73e;
+ // #c9f76f;
+ //
+ // #cd0074;
+ // #992667;
+ // #85004b;
+ // #e6399b;
+ // #e667af;
+// General
+@bodyBackgroundColor: #111;
+@wrapBackgroundColor: #111;
+@mainBackgroundColor: rgba(0,0,0,0.8);
+@baseTextColor: #fff;
+@standardLinkColor: #9fee00;
+@standardLinkColorHover: #85004b;
+@standardLinkColorVisited: #9fee00;
+@sidebarSelectedBackground: #85004b;
+@sidebarSelectedTextColor: #fff;
+@borderColor: #9fee00;
+@bgColorCodeBlock: #111;
+@colorCodeBlockBorder: @borderColor;
+// Header
+@headerBackgroundColor: #000;
+@headerBackgroundColorAlpha: rgba(0,0,0,0.8);
+@logoColor: #fff;
+// Footer
+@footerBackgroundColor: fade(#679b00, 80%);
+@footerTextColor: #fff;
+@footerLinkColor: #fff;
+@footerLinkColorHover: #85004b;
+// Responsive menu
+@navbarItemColor: #9fee00;
+@navbarItemHoverColor: #fff;
+@navbarItemHoverBgColor: #85004b;
+
+@navbarItemSelectedColor: #fff;
+@navbarItemSelectedBgColor: #85004b;
+
+// Mobile menu
+@mobileColor:       #9fee00;
+@mobileSelectedColor:       #fff;
+@mobileSelectedBgColor:     #85004b;
+@navbarMenuButtonClickedColor: #85004b;
+
+// Max menu
+@maxBgColor:                #000;
+@maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
+@maxButtonColor:            #9fee00;
+@maxButtonClickedColor:     @navbarMenuButtonClickedColor;
+@maxButtonFontSize: 2em;
+
+.wrap-all {
+    background-image: url(../img/background-photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.outer-wrap-header {
+    background: none;
+
+    .inner-wrap-header {
+        background: @headerBackgroundColor;
+        background: @headerBackgroundColorAlpha;
+
+        .site-header {
+            .site-logo-text {
+                padding: @magicNumber / 2;
+                font-weight: bold;
+            }
+            .navbar2 {
+                padding: @magicNumber / 2;
+            }
+            .rm-max.rm-navbar {
+                top: 28px;
+            }
+        }
+    }
+}
+
+.outer-wrap-footer {
+    background: none;
+
+    .inner-wrap-footer {
+        background: @footerBackgroundColor;
+    }
+}

@@ -1,0 +1,105 @@
+@import url(base.less);
+
+
+/*
+ * LESS Variables
+ */
+ // #39555C
+ // #116075
+ // #14728b
+ // #0b3b48
+ // #222
+// General
+@bodyBackgroundColor: #222;
+@wrapBackgroundColor: #fff;
+@mainBackgroundColor: #fff;
+@baseTextColor: #000;
+@standardLinkColor: #116075;
+@standardLinkColorHover: #0b3b48;
+@standardLinkColorVisited: #14728b;
+@sidebarSelectedBackground: #eee;
+@borderColor: #ddd;
+@bgColorCodeBlock: #fbfbfb;
+@colorCodeBlockBorder: @borderColor;
+// Header
+@headerBackgroundColor: #39555C;
+@headerBackgroundColorAlpha: rgba(8,42,51,0.8);
+@logoColor: #fff;
+// Footer
+@footerBackgroundColor: #222;
+@footerTextColor: #fff;
+@footerLinkColor: #14728b;
+@footerLinkColorHover: @standardLinkColor;
+// Responsive menu
+@navbarItemColor: #fff;
+@navbarItemHoverColor: @navbarItemColor;
+@navbarItemHoverBgColor: rgba(0,0,0,0.1);
+
+@navbarItemSelectedColor: #fff; // inherit;
+@navbarItemSelectedBgColor: rgba(0,0,0,0.1);
+
+// Mobile menu
+@mobileColor:       #fff;
+@mobileSelectedColor:       #fff;
+@mobileSelectedBgColor:     #39555C;
+@navbarMenuButtonClickedColor: #39555C;
+
+// Max menu
+@maxBgColor:                #222;
+@maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
+@maxButtonColor:            #fff;
+@maxButtonClickedColor:     @navbarMenuButtonClickedColor;
+@maxButtonFontSize: 2em;
+
+.wrap-all {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
+    background: rgb(125,126,125); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+}
+
+.outer-wrap-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.inner-wrap-main {
+    background: rgb(254,255,255);
+    background: -moz-linear-gradient(top, rgba(254,255,255,1) 0%, #dcdcdc 100%);
+    background: -webkit-linear-gradient(top, rgba(254,255,255,1) 0%,#dcdcdc 100%);
+    background: linear-gradient(to bottom, rgba(254,255,255,1) 0%, #dcdcdc 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#dcdcdc',GradientType=0 );
+    box-shadow: 0 4px 6px -1px #000;
+}
+.inner-wrap-after-main {
+    background: #dcdcdc;
+    box-shadow: 0 4px 6px -1px #000;
+}
+
+.outer-wrap-flash {
+    padding-top: 57px;
+}
+
+.inner-wrap-flash {
+    padding: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
+}
+
+.flash-wrap {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+.outer-wrap-footer {
+    margin-top: @magicNumber;
+    box-shadow: inset 0 4px 10px -2px #000;
+}
