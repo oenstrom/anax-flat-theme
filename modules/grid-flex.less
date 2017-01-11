@@ -28,9 +28,10 @@
 /**
  * Wrap grid in a container.
  */
-.container() {
+.container(@maxWidth) {
     margin-right: auto;
     margin-left: auto;
+    max-width: @maxWidth;
 }
 
 
@@ -41,7 +42,7 @@
 .row(@columns: @columns) {
     display: flex;
     flex-flow: row wrap;
-
+    
     margin-left:  -1 * @totalWidth * @gutterWidth / 2;
     margin-right: -1 * @totalWidth * @gutterWidth / 2;
 }

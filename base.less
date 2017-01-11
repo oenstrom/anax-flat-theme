@@ -91,6 +91,7 @@ body {
 
 .flash-wrap {
     text-align: center;
+    margin: 0 auto;
 }
 
 .sidebar-left,
@@ -122,15 +123,19 @@ fieldset {
 
 .outer-wrap-footer {
     background: @footerBackgroundColor;
-}
-.footer {
-    color: @footerTextColor;
 
-    a {
-        color: @footerLinkColor;
+    .footer {
+        color: @footerTextColor;
 
-        &:hover {
-            color: @footerLinkColorHover;
+        a {
+            color: @footerLinkColor;
+
+            &:hover {
+                color: @footerLinkColorHover;
+            }
+        }
+        .footer-column-x {
+            padding: 0 10px;
         }
     }
 }

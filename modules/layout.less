@@ -3,6 +3,20 @@
 @gutterWidth:   20;
 @columns:       12;
 
+html.vgrid .inner-wrap {
+    @gridImage: "../img/grid/grid1260x12x85x20-no-margin.png";
+    .showGrid(1260px, @gridImage);
+
+    &.inner-wrap-header {
+        .showGrid(100%, @gridImage);
+    }
+}
+
+html.hgrid .inner-wrap {
+    @gridImage: "../img/grid/horisontal-grid-24-trans.png";
+    .showTypography(@gridImage);
+}
+
 ul {
     list-style-position: inside;
 }
@@ -17,17 +31,18 @@ ul {
     .typographyOtherElements();
 }
 
-.route-grid .inner-wrap {
-    .showGrid(1260px);
-}
-.route-typography .inner-wrap {
-    .showTypography();
-}
+
+// .route-grid .inner-wrap {
+//     .showGrid(1260px);
+// }
+// .route-typography .inner-wrap {
+//     .showTypography();
+// }
 
 .inner-wrap {
-    .container();
-    padding: 0 10px;
-    max-width: 1240px;
+    .container(1260px);
+    //padding: 0 10px;
+    //max-width: 1260px;
 }
 
 .row {
@@ -35,8 +50,7 @@ ul {
 }
 
 .site-header,
-.breadcrumb-wrap,
-.footer {
+.breadcrumb-wrap {
     .column(@columns);
 }
 
@@ -195,27 +209,31 @@ ul {
 
 
 // Footer-delen
-.footer-column-wrapper {
-    display: flex;
+.footer {
+    width: 100%;
+    margin: 0;
+    .footer-column-wrapper {
+        display: flex;
 
-    .footer-column {
-        .column(@columns/3);
+        .footer-column {
+            .column(@columns/3);
+        }
     }
-}
-.site-footer {
-    text-align: center;
-    padding: @magicNumber;
-    padding-bottom: @magicNumber * 2;
+    .site-footer {
+        text-align: center;
+        padding: @magicNumber;
+        padding-bottom: @magicNumber * 2;
 
-    ul {
-        list-style: none;
-        margin: 0;
-        margin-top: @magicNumber;
-        padding: 0;
+        ul {
+            list-style: none;
+            margin: 0;
+            margin-top: @magicNumber;
+            padding: 0;
 
-        li {
-            display: inline;
-            margin: 0 1em;
+            li {
+                display: inline;
+                margin: 0 1em;
+            }
         }
     }
 }
@@ -250,10 +268,12 @@ img {
 }
 
 @media screen and (max-width: 650px) {
-    .footer-column-wrapper {
-        display: block;
-        .footer-column {
-            .column(@columns);
+    .footer {
+        .footer-column-wrapper {
+            display: block;
+            .footer-column {
+                width: 100%;
+            }
         }
     }
 }

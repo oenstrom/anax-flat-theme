@@ -1,20 +1,29 @@
 /**
  * Show grid.
  */
-.showGrid(@maxWidth: 1260px) {
-    background: @mainBackgroundColor url(../img/grid/grid1260x12x85x20.png);
-    background-repeat: repeat-y;
-    background-attachment: fixed;
-    background-position: center center;
+// .showGrid(@maxWidth: 1260px, @gridImage) {
+//     background-image: url("@{gridImage}");
+//     background-repeat: repeat-y;
+//     background-attachment: fixed;
+//     background-position: center center;
+//     background-size: 100% auto;
+//     margin-left: auto;
+//     margin-right: auto;
+//
+//     @media (min-width: @maxWidth) {
+//         background-size: @maxWidth auto;
+//     }
+// }
+
+.showGrid(@maxWidth, @gridImage) {
+    background: url("@{gridImage}") repeat-y fixed center center;
     background-size: 100% auto;
-    margin-left: auto;
-    margin-right: auto;
 
     @media (min-width: @maxWidth) {
         background-size: @maxWidth auto;
     }
 }
 
-.showTypography() {
-    background: @mainBackgroundColor url(../img/grid/horisontal-grid-24-trans.png);
+.showTypography(@gridImage) {
+    background: @mainBackgroundColor url("@{gridImage}");
 }
